@@ -16,7 +16,9 @@ fra i principali modelli europei.
   orario di ogni giorno selezionabile
 - **Da sapere** — tre indicazioni pratiche su pioggia, vento e temperatura
 - **Allerta della Protezione Civile** — il riquadro ufficiale pubblicato dalla
-  Protezione Civile della Regione Friuli Venezia Giulia, riferito al comune scelto
+  Protezione Civile della Regione Friuli Venezia Giulia, riferito al comune scelto.
+  La pagina distingue tre casi: avviso pubblicato, nessun avviso in corso, riquadro
+  non raggiungibile. Il terzo caso non viene mai presentato come assenza di allerta
 
 ## Comuni
 
