@@ -15,6 +15,8 @@ fra i principali modelli europei.
 - **Prossimi 7 giorni** — minime, massime e probabilità di pioggia, con il dettaglio
   orario di ogni giorno selezionabile
 - **Da sapere** — tre indicazioni pratiche su pioggia, vento e temperatura
+- **Allerta della Protezione Civile** — il riquadro ufficiale pubblicato dalla
+  Protezione Civile della Regione Friuli Venezia Giulia, riferito al comune scelto
 
 ## Comuni
 
@@ -22,6 +24,23 @@ Tutti i 215 Comuni della regione, raggruppati per provincia nel menu a tendina:
 Gorizia 25, Pordenone 50, Trieste 6, Udine 134. Roveredo in Piano, Pordenone e
 Trieste restano raggiungibili con un tocco. La pagina ricorda l'ultimo comune scelto
 sul dispositivo di chi la consulta.
+
+## Collegamento diretto per Comune
+
+Ogni comune ha un proprio indirizzo, formato dal nome in minuscolo con i trattini
+al posto degli spazi:
+
+```
+https://costalonga.org/meteo/#tarvisio
+https://costalonga.org/meteo/#roveredo-in-piano
+https://costalonga.org/meteo/#san-vito-al-tagliamento
+```
+
+Chi apre il collegamento trova la pagina già sul comune indicato. Il tasto **Copia
+il collegamento** mette negli appunti l'indirizzo del comune visualizzato, pronto da
+mandare per messaggio. L'indirizzo si aggiorna da solo a ogni cambio di comune.
+
+I 215 identificativi sono tutti distinti: nessuna sovrapposizione fra comuni.
 
 ## Fonti
 
@@ -32,6 +51,9 @@ sul dispositivo di chi la consulta.
 - **Coordinate:** centroide del municipio di ciascun Comune, standard EPSG:4326,
   dalla raccolta [comuni-italiani](https://github.com/opendatasicilia/comuni-italiani)
   di Open Data Sicilia.
+- **Allerte:** riquadro ufficiale della Protezione Civile della Regione Friuli
+  Venezia Giulia ([protezionecivile.fvg.it](https://www.protezionecivile.fvg.it/)),
+  richiamato con il codice ISTAT del comune privato dello zero iniziale.
 
 L'elenco è stato verificato incrociando due archivi indipendenti: 215 Comuni, stessi
 codici ISTAT e stesse denominazioni in entrambi.
