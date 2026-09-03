@@ -60,10 +60,19 @@ I 215 identificativi sono tutti distinti: nessuna sovrapposizione fra comuni.
 L'elenco è stato verificato incrociando due archivi indipendenti: 215 Comuni, stessi
 codici ISTAT e stesse denominazioni in entrambi.
 
+## Stile
+
+La pagina adotta il sistema visivo del sito costalonga.org: carattere Manrope
+incorporato nel file, blu `#084270`, giallo `#f8f06d`, fondo `#eef3f7`, schede
+bianche con bordo giallo a sinistra, titoli maiuscoli. Testata e piè di pagina
+sono quelli del sito, con la tendina di navigazione fra le pagine.
+
 ## Tecnica
 
-Pagina singola, senza dipendenze esterne: HTML, CSS e JavaScript in un unico file.
-I dati arrivano dall'interfaccia pubblica di Open-Meteo, senza chiave di accesso.
+Pagina singola, senza dipendenze esterne: HTML, CSS, JavaScript, carattere e logo
+in un unico file, nessuna richiesta a servizi terzi per la grafica. I dati arrivano
+dall'interfaccia pubblica di Open-Meteo, senza chiave di accesso; il riquadro delle
+allerte richiama lo script della Regione.
 
 ## Avvertenza
 
