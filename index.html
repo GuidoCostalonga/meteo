@@ -14,7 +14,8 @@
     .cities{display:flex;gap:9px;overflow:auto;padding:5px 1px 16px;scrollbar-width:none}.cities::-webkit-scrollbar{display:none}.city{border:1px solid var(--line);background:#0d2133bb;border-radius:999px;padding:10px 16px;white-space:nowrap;cursor:pointer;transition:.2s}.city:hover{border-color:#57809a}.city.active{background:var(--ink);color:#071727;border-color:var(--ink);font-weight:700}
     .picker{position:relative;display:inline-flex;align-items:center;flex:0 0 auto}.picker:after{content:"▾";position:absolute;right:15px;pointer-events:none;color:var(--cyan);font-size:.85rem}.picker select{appearance:none;-webkit-appearance:none;font:inherit;color:var(--ink);border:1px solid var(--line);background:#0d2133bb;border-radius:999px;padding:10px 36px 10px 16px;cursor:pointer;transition:.2s;max-width:250px}.picker select:hover{border-color:#57809a}.picker select:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}.picker select option,.picker select optgroup{background:#0d2133;color:var(--ink)}
     .condividi{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:-6px 2px 18px}.condividi-nota{color:var(--muted);font-size:.8rem}.copia{border:1px solid var(--line);background:#0d2133bb;border-radius:999px;padding:10px 16px;white-space:nowrap;cursor:pointer;transition:.2s}.copia:hover{border-color:#57809a}.copia:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}.copia.ok{background:var(--good);color:#071727;border-color:var(--good);font-weight:700}
-    .allerte{padding:18px}.allerte-box{background:#f5f9fc;border-radius:20px;padding:14px 16px;overflow:hidden}.allerte-box iframe{display:block;width:100%;border:0;min-height:104px}.allerte-nota{margin:14px 4px 2px;color:#9fb5c4;font-size:.82rem;line-height:1.55}.allerte-nota a{color:var(--cyan)}
+    .allerte{padding:18px}.allerte-box{border-radius:20px;overflow:hidden;transition:background .2s}.allerte-box.attivo{background:#f5f9fc;padding:14px 16px}.allerte-box iframe{display:block;width:100%;border:0;height:1px}.allerte-stato{display:flex;gap:13px;align-items:flex-start;padding:6px 4px 2px}.allerte-stato[hidden],.allerte-box[hidden]{display:none}.allerte-stato .pallino{width:10px;height:10px;border-radius:50%;background:var(--good);margin-top:7px;flex:0 0 auto}.allerte-stato.ko .pallino{background:var(--warn)}.allerte-stato b{display:block;font-size:1.05rem;margin-bottom:3px}.allerte-stato .dettaglio{color:#bbced9;font-size:.9rem;line-height:1.5}
+    .allerte-nota{margin:14px 4px 2px;color:#9fb5c4;font-size:.82rem;line-height:1.55}.allerte-nota a{color:var(--cyan)}
     .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}.panel{background:linear-gradient(145deg,#102a40e8,#0a1e30e8);border:1px solid #2d4b60;border-radius:28px;box-shadow:var(--shadow);backdrop-filter:blur(12px)}.now{min-height:330px;padding:28px;position:relative;overflow:hidden}.now:after{content:"";position:absolute;width:250px;height:250px;right:-60px;top:-70px;border-radius:50%;background:radial-gradient(circle,#5cddff22,transparent 65%)}.eyebrow{color:var(--cyan);font-weight:750;text-transform:uppercase;font-size:.75rem;letter-spacing:.14em}.big{display:flex;align-items:center;gap:22px;margin:17px 0 8px}.weather-icon{font-size:5.4rem;line-height:1;filter:drop-shadow(0 12px 20px #0007)}.temp{font-size:clamp(4.6rem,10vw,7rem);letter-spacing:-.08em;line-height:.85;font-weight:750}.degree{font-size:.42em;vertical-align:top;color:var(--cyan)}.condition{font-size:1.28rem;margin:14px 0 22px}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.metric{padding:12px;border-radius:16px;background:#07182788;border:1px solid #27475c}.metric span{display:block;color:var(--muted);font-size:.78rem}.metric b{font-size:1rem}
     .confidence{padding:26px;display:flex;flex-direction:column}.scoreline{display:flex;justify-content:space-between;align-items:start;gap:20px}.score{font-size:3.4rem;font-weight:760;letter-spacing:-.06em;color:var(--good)}.score small{font-size:.9rem;color:var(--muted);letter-spacing:0}.bar{height:9px;border-radius:10px;background:#18384d;margin:16px 0 20px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--good));border-radius:inherit;transition:width .8s}.models{display:grid;gap:10px;margin-top:auto}.model{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #26465b;padding-top:10px;color:#bcd0dd}.dot{width:8px;height:8px;display:inline-block;border-radius:50%;background:var(--good);margin-right:8px}.model strong{color:var(--ink);font-size:.9rem}
     .section-title{display:flex;align-items:end;justify-content:space-between;margin:36px 2px 13px}.section-title h2{font-size:1.4rem;margin:0}.section-title span{color:var(--muted);font-size:.82rem}.hourly{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(92px,1fr);gap:9px;overflow:auto;padding:2px 2px 12px;scrollbar-color:#31566f transparent}.hour{background:#0d2133;border:1px solid #244359;border-radius:18px;padding:14px 10px;text-align:center}.hour.now-hour{border-color:var(--cyan);background:#123148}.hour time,.hour small{color:var(--muted);font-size:.78rem;display:block}.hour i{font-style:normal;font-size:1.75rem;display:block;margin:9px}.hour b{font-size:1.07rem}.hour em{display:block;color:#6fd6ff;font-size:.76rem;font-style:normal;margin-top:6px}
@@ -33,7 +34,7 @@
     <aside class="panel confidence"><div class="scoreline"><div><div class="eyebrow">Attendibilità 24 ore</div><div class="score"><span id="score">--</span><small>/100</small></div></div><div id="scoreText">In calcolo</div></div><div class="bar"><i id="scoreBar"></i></div><p id="agreement">Confronto dei modelli in corso.</p><div class="models"><div class="model"><span><i class="dot"></i>ICON-D2 / DWD</span><strong id="m1">—</strong></div><div class="model"><span><i class="dot"></i>ECMWF IFS</span><strong id="m2">—</strong></div><div class="model"><span><i class="dot"></i>Météo-France</span><strong id="m3">—</strong></div></div></aside>
   </section>
   <div class="section-title"><h2>Allerta della Protezione Civile</h2><span>Fonte ufficiale · Regione Friuli Venezia Giulia</span></div>
-  <section class="panel allerte"><div class="allerte-box"><iframe id="allerteFrame" title="Allerta della Protezione Civile della Regione Friuli Venezia Giulia" scrolling="no"></iframe></div><p class="allerte-nota">Riquadro pubblicato dalla Protezione Civile della Regione Friuli Venezia Giulia, riferito al comune selezionato. In caso di emergenza fanno fede sempre le comunicazioni ufficiali della Regione: <a href="https://www.protezionecivile.fvg.it/" target="_blank" rel="noopener">protezionecivile.fvg.it</a>.</p></section>
+  <section class="panel allerte"><div class="allerte-box" id="allerteBox"><iframe id="allerteFrame" title="Allerta della Protezione Civile della Regione Friuli Venezia Giulia" scrolling="no"></iframe></div><div class="allerte-stato" id="allerteStato" hidden><span class="pallino"></span><div><b id="allerteTitolo"></b><span class="dettaglio" id="allerteTesto"></span></div></div><p class="allerte-nota">Riquadro pubblicato dalla Protezione Civile della Regione Friuli Venezia Giulia, riferito al comune selezionato. In caso di emergenza fanno fede sempre le comunicazioni ufficiali della Regione: <a href="https://www.protezionecivile.fvg.it/" target="_blank" rel="noopener">protezionecivile.fvg.it</a>.</p></section>
   <div class="section-title"><h2>Prossime ore</h2><span>Scorri per vedere il dettaglio →</span></div><section class="hourly" id="hourly" aria-label="Previsione oraria"></section>
   <div class="section-title"><h2>Prossimi 7 giorni</h2><span>Seleziona un giorno · Min / Max</span></div><section class="lower"><div class="panel forecast" id="daily"></div><aside class="panel tips"><h2>Da sapere</h2><div id="tips"></div></aside></section>
   <section class="panel day-detail" id="dayDetail"><div class="detail-head"><h2 id="detailTitle">Dettaglio orario</h2><span>24 ore · temperatura, pioggia e vento</span></div><div class="detail-hours" id="detailHours"></div></section>
@@ -137,18 +138,41 @@ sel.innerHTML=Object.entries(PROV).sort((a,b)=>a[1].localeCompare(b[1],'it')).ma
 const daHash=()=>PER_SLUG.get(decodeURIComponent((location.hash||'').replace(/^#/,'')).trim().toLowerCase());
 const indirizzo=c=>location.origin+location.pathname+'#'+c.slug;
 /* riquadro allerte: ricostruito a ogni cambio di comune dentro una cornice isolata,
-   cosi lo script della Protezione Civile riparte da zero sul codice ISTAT giusto */
-let tMisura;
-function allerte(c){if(!telaio)return;clearInterval(tMisura);telaio.style.height='';
+   cosi lo script della Protezione Civile riparte da zero sul codice ISTAT giusto.
+   Lo script segnala se e stato caricato, cosi la pagina distingue tre casi:
+   avviso presente, nessun avviso pubblicato, riquadro non raggiungibile. */
+let tMisura,giriAllerte=0,statoAllerte='';
+function allerte(c){if(!telaio)return;clearInterval(tMisura);giriAllerte=0;statoAllerte='';
+ telaio.style.height='1px';$('#allerteBox').classList.remove('attivo');
+ $('#allerteBox').hidden=false;$('#allerteStato').hidden=true;
  telaio.srcdoc='<!doctype html><html lang="it"><head><meta charset="utf-8"><base target="_blank">'
   +'<style>html,body{margin:0;padding:0;background:transparent;color:#14212b;'
-  +'font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}</style></head><body>'
-  +'<script type="text/javascript" src="https://www.protezionecivile.fvg.it/widgets/pcrfvgit_alert.js"><\/script>'
-  +'<div class="pcrfvgit_alert_widget" data-istatcode="'+c.istat+'"></div></body></html>'}
-function misuraAllerte(){if(!telaio)return;try{const d=telaio.contentDocument;if(!d||!d.body)return;
- const h=Math.max(d.body.scrollHeight,d.documentElement.scrollHeight);if(h>20)telaio.style.height=(h+10)+'px'}catch(e){}}
-if(telaio)telaio.addEventListener('load',()=>{misuraAllerte();let giri=0;clearInterval(tMisura);
- tMisura=setInterval(()=>{misuraAllerte();if(++giri>30)clearInterval(tMisura)},500)});
+  +'font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}'
+  +'#misura{overflow:hidden}</style></head><body><div id="misura">'
+  +'<script type="text/javascript" src="https://www.protezionecivile.fvg.it/widgets/pcrfvgit_alert.js"'
+  +' onload="window.pcrCaricato=true" onerror="window.pcrCaricato=false"><\/script>'
+  +'<div class="pcrfvgit_alert_widget" data-istatcode="'+c.istat+'"></div></div></body></html>'}
+function mostraStato(stato,c){if(stato===statoAllerte)return;statoAllerte=stato;
+ const box=$('#allerteBox'),st=$('#allerteStato');
+ if(stato==='pieno'){box.hidden=false;box.classList.add('attivo');st.hidden=true;return}
+ box.hidden=true;box.classList.remove('attivo');st.hidden=false;st.classList.toggle('ko',stato==='ko');
+ if(stato==='ko'){$('#allerteTitolo').textContent='Riquadro non raggiungibile';
+  $('#allerteTesto').textContent='Non è stato possibile caricare il riquadro della Protezione Civile regionale. Controlla direttamente il sito della Regione.'}
+ else{$('#allerteTitolo').textContent='Nessun avviso in corso';
+  $('#allerteTesto').textContent='La Protezione Civile regionale non sta pubblicando allerte per '+c.name+'. Verificato alle '
+   +new Date().toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'})+'.'}}
+function controllaAllerte(){if(!telaio)return;const c=comune(active);if(!c)return;
+ let d,caricato;try{d=telaio.contentDocument;caricato=telaio.contentWindow.pcrCaricato}catch(e){return}
+ if(!d||!d.body)return;
+ const w=d.querySelector('.pcrfvgit_alert_widget');
+ if(w&&(w.children.length||w.textContent.trim().length)){mostraStato('pieno',c);
+  const m=d.getElementById('misura'),h=m?Math.ceil(m.getBoundingClientRect().height):0;
+  if(h>20&&Math.abs(h+8-parseFloat(telaio.style.height||0))>2)telaio.style.height=(h+8)+'px';return}
+ if(caricato===false){mostraStato('ko',c);return}
+ if(caricato===true&&giriAllerte>6)mostraStato('vuoto',c);
+ else if(giriAllerte>24)mostraStato('ko',c)}
+if(telaio)telaio.addEventListener('load',()=>{giriAllerte=0;controllaAllerte();clearInterval(tMisura);
+ tMisura=setInterval(()=>{giriAllerte++;controllaAllerte();if(giriAllerte>30)clearInterval(tMisura)},500)});
 function scegli(nome,ricarica=true){if(!INDICE.has(nome))return;active=nome;selectedDay=0;sel.value=nome;
  document.querySelectorAll('.city').forEach(b=>b.classList.toggle('active',b.dataset.c===nome));
  const c=comune(nome);
