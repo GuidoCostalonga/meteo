@@ -286,6 +286,7 @@ h2.tit span{display:block;font-size:12px;font-weight:800;letter-spacing:.12em;te
 .copia.ok{background:var(--giallo);border-color:var(--giallo);color:var(--blu)}
 .condividi{display:flex;align-items:center;gap:var(--s3);flex-wrap:wrap;margin-bottom:var(--s2)}
 .condividi-nota{font-size:13px;color:var(--testo-2)}
+.copia.app{text-decoration:none}
 
 /* ---------- adesso ---------- */
 .duo{display:grid;grid-template-columns:1.1fr .9fr;gap:var(--s4);align-items:start}
@@ -466,6 +467,10 @@ h2.tit span{display:block;font-size:12px;font-weight:800;letter-spacing:.12em;te
     <button class="copia" id="copia" type="button">Copia il collegamento</button>
     <span class="condividi-nota">Il collegamento apre la pagina già sul comune scelto: comodo da mandare per messaggio.</span>
   </div>
+  <div class="condividi">
+    <a class="copia app" href="/meteo-android/apk/MeteoFVG.apk">Scarica l'app per Android</a>
+    <span class="condividi-nota">Gli stessi dati di questa pagina sul telefono, con il widget animato sulla schermata iniziale. Solo Android: al primo avvio il telefono chiede di consentire l'installazione.</span>
+  </div>
 
   <div id="error" class="error">I dati live non sono momentaneamente raggiungibili. Riprovo automaticamente tra poco.</div>
 
@@ -545,6 +550,7 @@ h2.tit span{display:block;font-size:12px;font-weight:800;letter-spacing:.12em;te
       <h2>Mappe e strumenti</h2>
       <ul>
         <li><a href="/meteo/">Meteo Friuli Venezia Giulia</a></li>
+        <li><a href="/meteo-android/apk/MeteoFVG.apk">Meteo FVG, app per Android</a></li>
         <li><a href="/roveredo-in-piano/">Roveredo in Piano</a></li>
         <li><a href="/catasto-map/">Catasto Map</a></li>
         <li><a href="/stadi-europa/">Gli stadi d'Europa</a></li>
